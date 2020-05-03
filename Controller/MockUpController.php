@@ -14,7 +14,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Twig\Loader\FilesystemLoader;
 use Twig\Loader\LoaderInterface;
 
@@ -58,9 +57,6 @@ class MockUpController extends AbstractController
         }
 
         $view = 'mock-up/'.$path.'.html.twig';
-        if (!$this->loader->exists($view)) {
-//            throw new NotFoundHttpException(sprintf('Cannot find view %s', $view));
-        }
 
         return $this->render($view, $parameters);
     }
