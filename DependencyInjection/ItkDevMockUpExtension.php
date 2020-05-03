@@ -10,7 +10,6 @@
 
 namespace ItkDev\MockUpBundle\DependencyInjection;
 
-use ItkDev\UserBundle\User\UserManager;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -32,13 +31,7 @@ class ItkDevMockUpExtension extends Extension implements PrependExtensionInterfa
 
     public function load(array $configs, ContainerBuilder $builder)
     {
-//        header('content-type: text/plain'); echo var_export(null, true); die(__FILE__.':'.__LINE__.':'.__METHOD__);
         $loader = new XmlFileLoader($builder, new FileLocator(\dirname(__DIR__).'/Resources/config'));
         $loader->load('services.xml');
-
-//        $configuration = new Configuration();
-//        $config = $this->processConfiguration($configuration, $configs);
-//        $definition = $builder->getDefinition(UserManager::class);
-//        $definition->replaceArgument('$configuration', $config);
     }
 }

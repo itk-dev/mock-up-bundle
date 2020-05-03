@@ -21,7 +21,7 @@
             "ItkDev\\MockUpBundle\\": "./"
         }
     },
-		"scripts": {
+    "scripts": {
         "coding-standards-check/php-cs-fixer": [
             "php-cs-fixer --config=.php_cs.dist fix --dry-run"
         ],
@@ -38,7 +38,7 @@
         "coding-standards-apply": [
             "@coding-standards-apply/php-cs-fixer"
         ]
-		},
+    },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
         "friendsoftwig/twigcs": "^3.2"
